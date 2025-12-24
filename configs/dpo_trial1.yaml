@@ -1,0 +1,44 @@
+# DPO Trial 1: Conservative Configuration
+# Lower beta, more exploration
+
+model:
+  name: "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+  sft_model_path: "./outputs/sft_best"  # Best SFT model
+  use_4bit: true
+  bnb_4bit_compute_dtype: "float16"
+  bnb_4bit_quant_type: "nf4"
+
+lora:
+  r: 8
+  lora_alpha: 16
+  target_modules:
+    - "q_proj"
+    - "v_proj"
+  lora_dropout: 0.05
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+dpo:
+  beta: 0.1                      # Lower beta = more exploration
+  loss_type: "sigmoid"           # Standard DPO loss
+
+training:
+  output_dir: "./outputs/dpo_trial1"
+  num_train_epochs: 2
+  per_device_train_batch_size: 2
+  per_device_eval_batch_size: 2
+  gradient_accumulation_steps: 4
+  learning_rate: 5.0e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  lr_scheduler_type: "cosine"
+  logging_steps: 10
+  save_steps: 50
+  eval_steps: 50
+  max_seq_length: 512
+  max_prompt_length: 256
+  fp16: true
+
+data:
+  dataset_name: "argilla/distilabel-intel-orca-dpo-pairs"
+  max_samples: 5000

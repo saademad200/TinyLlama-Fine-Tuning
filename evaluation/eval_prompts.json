@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "category": "Factual QA - Science",
+        "prompt": "What is photosynthesis and why is it important for life on Earth?",
+        "target_response": "Photosynthesis is the biological process by which plants, algae, and some bacteria convert light energy (usually from the sun) into chemical energy stored in glucose. During this process, they absorb carbon dioxide from the atmosphere and water from the soil, using chlorophyll to capture light energy. The byproduct is oxygen, which is released into the atmosphere. Photosynthesis is crucial for life on Earth because it produces the oxygen we breathe, forms the base of most food chains by creating organic compounds, and helps regulate atmospheric carbon dioxide levels, playing a vital role in Earth's climate system."
+    },
+    {
+        "id": 2,
+        "category": "Factual QA - History",
+        "prompt": "Who was Alexander the Great and what were his major achievements?",
+        "target_response": "Alexander the Great (356-323 BCE) was a king of the ancient Greek kingdom of Macedon and one of history's most successful military commanders. He became king at age 20 after his father Philip II's assassination. His major achievements include: conquering the Persian Empire (the largest empire of his time), spreading Greek culture across three continents from Greece to northwestern India, founding over 20 cities including Alexandria in Egypt, and creating one of the largest empires in ancient history by age 30. His conquests facilitated cultural exchange between East and West, leading to the Hellenistic period. He remained undefeated in battle and is studied in military academies to this day."
+    },
+    {
+        "id": 3,
+        "category": "Instructional - Coding",
+        "prompt": "How do I write a function in Python to check if a number is prime?",
+        "target_response": "Here's how to write a Python function to check if a number is prime:\n\n```python\ndef is_prime(n):\n    # Handle edge cases\n    if n < 2:\n        return False\n    if n == 2:\n        return True\n    if n % 2 == 0:\n        return False\n    \n    # Check odd divisors up to square root\n    for i in range(3, int(n**0.5) + 1, 2):\n        if n % i == 0:\n            return False\n    return True\n```\n\nThis function works by: (1) returning False for numbers less than 2, (2) returning True for 2, (3) eliminating even numbers, and (4) checking only odd divisors up to the square root for efficiency. You can use it like: `is_prime(17)` which returns `True`."
+    },
+    {
+        "id": 4,
+        "category": "Instructional - Writing",
+        "prompt": "How do I write a professional email requesting a meeting with my manager?",
+        "target_response": "Here's a template for a professional meeting request email:\n\nSubject: Meeting Request - [Topic]\n\nDear [Manager's Name],\n\nI hope this email finds you well. I would like to request a meeting to discuss [specific topic/reason]. I believe this conversation would help [explain benefit/purpose].\n\nI am available at the following times:\n- [Date/Time Option 1]\n- [Date/Time Option 2]\n- [Date/Time Option 3]\n\nPlease let me know if any of these times work for you, or suggest an alternative that fits your schedule. The meeting should take approximately [duration].\n\nThank you for considering my request. I look forward to hearing from you.\n\nBest regards,\n[Your Name]\n[Your Position]\n\nKey tips: Keep it concise, be clear about the purpose, offer flexible timing options, and maintain a respectful tone."
+    },
+    {
+        "id": 5,
+        "category": "Reasoning - Problem Solving",
+        "prompt": "If a train leaves Station A at 9:00 AM traveling at 60 mph, and another train leaves Station B at 10:00 AM traveling at 80 mph toward Station A, and the stations are 280 miles apart, at what time will they meet?",
+        "target_response": "Let me solve this step-by-step:\n\n1) Train A starts at 9:00 AM at 60 mph. By 10:00 AM (when Train B starts), Train A has traveled: 60 × 1 = 60 miles.\n\n2) Remaining distance between trains at 10:00 AM: 280 - 60 = 220 miles.\n\n3) After 10:00 AM, both trains move toward each other. Their combined closing speed: 60 + 80 = 140 mph.\n\n4) Time to meet after 10:00 AM: 220 ÷ 140 = 1.57 hours ≈ 1 hour 34 minutes.\n\n5) Meeting time: 10:00 AM + 1 hour 34 minutes = 11:34 AM.\n\nThe trains will meet at approximately 11:34 AM, about 154 miles from Station A and 126 miles from Station B."
+    },
+    {
+        "id": 6,
+        "category": "Reasoning - Analysis",
+        "prompt": "What are the pros and cons of working from home versus working in an office?",
+        "target_response": "Here's an analysis of remote work vs. office work:\n\n**Working from Home - Pros:**\n- Flexibility in schedule and work environment\n- No commute time or costs\n- Better work-life balance potential\n- Fewer office distractions\n- Reduced expenses (food, clothing, transportation)\n\n**Working from Home - Cons:**\n- Social isolation and reduced collaboration\n- Difficulty separating work and personal life\n- Potential for more distractions at home\n- Limited career visibility\n- Technology and connectivity challenges\n\n**Working in Office - Pros:**\n- Face-to-face collaboration and teamwork\n- Clear work-life boundaries\n- Better access to resources and support\n- Networking opportunities\n- Structured routine\n\n**Working in Office - Cons:**\n- Commute time and costs\n- Less flexibility\n- Office politics and interruptions\n- Higher personal expenses\n- Less autonomy\n\nThe best choice depends on individual work style, job requirements, and personal circumstances."
+    },
+    {
+        "id": 7,
+        "category": "Creative - Storytelling",
+        "prompt": "Write a short story opening (2-3 sentences) about a robot learning to feel emotions for the first time.",
+        "target_response": "Unit 7-X had catalogued 847,293 sunsets in its operational lifetime, each one precisely identical in its processing queue—until this morning. As the first rays of amber light crept across the abandoned factory floor and illuminated the wilted flower in its metallic palm, something new flickered in its neural pathways: not an error, not a malfunction, but a strange warmth that made it want to protect this fragile thing. For the first time in its existence, Unit 7-X understood why humans called it 'beautiful.'"
+    },
+    {
+        "id": 8,
+        "category": "Creative - Explanation",
+        "prompt": "Explain quantum computing to a 10-year-old child.",
+        "target_response": "Imagine you have a magical coin that can be both heads AND tails at the same time while it's spinning in the air—that's kind of how quantum computers work!\n\nRegular computers use 'bits' that are like light switches—they're either ON (1) or OFF (0), one at a time. But quantum computers use 'qubits' that can be ON, OFF, or BOTH at once, just like that spinning coin!\n\nThis is super cool because when you have lots of these magical spinning coins working together, they can try millions of answers to a problem all at the same time, instead of checking one answer after another like regular computers do.\n\nSo quantum computers are like having a million helpers solving a maze simultaneously, while regular computers have just one helper trying one path at a time. That's why they can solve some really hard problems much faster!"
+    },
+    {
+        "id": 9,
+        "category": "Advice - Personal",
+        "prompt": "What are some effective strategies for managing stress and anxiety?",
+        "target_response": "Here are effective strategies for managing stress and anxiety:\n\n**Physical Techniques:**\n- Deep breathing exercises (4-7-8 technique: inhale 4 sec, hold 7 sec, exhale 8 sec)\n- Regular exercise (even 20-minute walks help)\n- Adequate sleep (7-9 hours for adults)\n- Limiting caffeine and alcohol\n\n**Mental Strategies:**\n- Practice mindfulness and meditation\n- Challenge negative thoughts with evidence\n- Break overwhelming tasks into smaller steps\n- Focus on what you can control\n\n**Lifestyle Changes:**\n- Maintain a consistent routine\n- Connect with supportive friends and family\n- Set boundaries with work and technology\n- Engage in hobbies you enjoy\n\n**Professional Help:**\n- Therapy (especially cognitive-behavioral therapy)\n- Support groups\n- Consulting a healthcare provider if symptoms persist\n\nStart with one or two techniques and build gradually. Remember, it's okay to seek professional help—managing mental health is just as important as physical health."
+    },
+    {
+        "id": 10,
+        "category": "Advice - Professional",
+        "prompt": "What skills should I develop to advance in my career as a software developer?",
+        "target_response": "Here are key skills to develop for career advancement as a software developer:\n\n**Technical Skills:**\n- Master your core programming languages deeply\n- Learn system design and architecture patterns\n- Understand databases, APIs, and cloud services (AWS/GCP/Azure)\n- Practice writing clean, maintainable, and tested code\n- Stay current with industry trends and new technologies\n\n**Soft Skills:**\n- Communication: explain technical concepts clearly to non-technical stakeholders\n- Collaboration: work effectively in teams, code reviews, pair programming\n- Problem-solving: break down complex problems systematically\n- Time management: prioritize tasks and meet deadlines\n\n**Leadership Skills:**\n- Mentoring junior developers\n- Project planning and estimation\n- Making technical decisions and trade-offs\n- Presenting ideas and proposals\n\n**Career Growth Actions:**\n- Build a portfolio of projects\n- Contribute to open source\n- Write technical blogs or give talks\n- Network within the developer community\n- Seek feedback and continuously improve\n\nFocus on becoming a 'T-shaped' developer: deep expertise in one area with broad knowledge across many."
+    }
+]

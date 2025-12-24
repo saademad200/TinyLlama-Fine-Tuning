@@ -1,0 +1,38 @@
+# SFT Trial 1: Conservative LoRA Configuration
+# Lower rank, fewer parameters, standard precision
+
+model:
+  name: "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+  use_4bit: false  # Full precision
+  use_8bit: false
+
+lora:
+  r: 8                           # LoRA rank
+  lora_alpha: 16                 # Scaling factor
+  target_modules:
+    - "q_proj"
+    - "v_proj"
+  lora_dropout: 0.05
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+training:
+  output_dir: "./outputs/sft_trial1"
+  num_train_epochs: 3
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 4
+  gradient_accumulation_steps: 4
+  learning_rate: 2.0e-4
+  weight_decay: 0.01
+  warmup_ratio: 0.03
+  lr_scheduler_type: "cosine"
+  logging_steps: 10
+  save_steps: 100
+  eval_steps: 100
+  max_seq_length: 512
+  fp16: true
+  
+data:
+  dataset_name: "databricks/databricks-dolly-15k"
+  train_split: 0.9
+  max_samples: 10000  # Subset for faster training
