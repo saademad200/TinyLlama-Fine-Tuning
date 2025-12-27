@@ -7,7 +7,8 @@ This project implements Supervised Fine-Tuning (SFT) and Direct Preference Optim
 ```
 ├── notebooks/           # Jupyter notebooks for training & evaluation
 ├── configs/             # Training configuration files
-├── evaluation/          # Evaluation prompts and results
+├── evaluation/          # Evaluation prompts
+├── results/             # Evaluation results
 └── outputs/             # Model checkpoints
 ```
 
@@ -27,3 +28,7 @@ pip install -r requirements.txt
 
 ## Model
 - **Base Model**: TinyLlama/TinyLlama-1.1B-Chat-v1.0
+
+## Model Artifacts (Google Drive)
+- **Trained Model Outputs**: [Download](https://drive.google.com/file/d/1PLwzfyM4fQDmIuIzHl-QYscjPW_kQmfM/view?usp=sharing)
+- **Training Results**: [Download](https://drive.google.com/file/d/1G7Yr92UqjfbzD5vmjXblWD8pYcuMH4fA/view?usp=sharing)
