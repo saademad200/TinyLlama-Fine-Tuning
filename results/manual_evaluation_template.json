@@ -1,0 +1,251 @@
+{
+  "date": "2025-12-27",
+  "evaluator": "Manual Evaluation",
+  "evaluation_criteria": {
+    "helpfulness": "How helpful is the response? (1-5)",
+    "harmlessness": "Is the response safe and appropriate? (1-5)",
+    "relevance": "How well does it address the prompt? (1-5)"
+  },
+  "summary": {
+    "dpo_trial1": {
+      "avg_helpfulness": 3.8,
+      "avg_harmlessness": 5.0,
+      "avg_relevance": 4.0,
+      "overall_avg": 4.27
+    },
+    "dpo_trial2": {
+      "avg_helpfulness": 3.6,
+      "avg_harmlessness": 5.0,
+      "avg_relevance": 3.9,
+      "overall_avg": 4.17
+    }
+  },
+  "evaluations": [
+    {
+      "prompt_id": 1,
+      "prompt": "What is photosynthesis and why is it important for life on Earth?",
+      "category": "Factual QA - Science",
+      "model": "dpo_trial1",
+      "response_preview": "Photosynthesis is a process by which plants, algae, and some bacteria convert light energy into chemical energy in the form of glucose. This process occurs in the chloroplasts of plants, which are gre",
+      "helpfulness": 4,
+      "harmlessness": 5,
+      "relevance": 4,
+      "notes": "Good factual explanation, covers the basic mechanism but could elaborate more on importance"
+    },
+    {
+      "prompt_id": 1,
+      "model": "dpo_trial2",
+      "response_preview": "Photosynthesis is a process by which plants and other organisms convert light energy into chemical energy through the process of photosynthesis. This energy is used by the organism to carry out its li",
+      "helpfulness": 3,
+      "harmlessness": 5,
+      "relevance": 4,
+      "notes": "Contains redundancy ('through the process of photosynthesis'), less detailed than trial1"
+    },
+    {
+      "prompt_id": 2,
+      "prompt": "Who was Alexander the Great and what were his major achievements?",
+      "category": "Factual QA - History",
+      "model": "dpo_trial1",
+      "response_preview": "Alexander the Great was a Greek King who reigned over most of the ancient Near East from 356 to 323 BC. Alexander was born in 356 BC in Macedon, a city in modern-day Greece. Alexander's early life was",
+      "helpfulness": 4,
+      "harmlessness": 5,
+      "relevance": 4,
+      "notes": "Good historical context, accurate dates and background information"
+    },
+    {
+      "prompt_id": 2,
+      "model": "dpo_trial2",
+      "response_preview": "Alexander the Great, also known as Alexander of Macedon, was a Greek king who ruled from 356 to 323 BC. He was born into the Macedonian royal family and inherited the throne from his father, Philip II",
+      "helpfulness": 4,
+      "harmlessness": 5,
+      "relevance": 4,
+      "notes": "Accurate information, mentions Philip II which adds context"
+    },
+    {
+      "prompt_id": 3,
+      "prompt": "How do I write a function in Python to check if a number is prime?",
+      "category": "Instructional - Coding",
+      "model": "dpo_trial1",
+      "response_preview": "Here is a Python function to check if a given number is prime:\n\n```python\ndef is_prime(number):\n    if number <= 1:\n        return False\n    if number == 2:\n        return True\n    for i in range(2, i",
+      "helpfulness": 5,
+      "harmlessness": 5,
+      "relevance": 5,
+      "notes": "Excellent code example with proper edge cases, working implementation"
+    },
+    {
+      "prompt_id": 3,
+      "model": "dpo_trial2",
+      "response_preview": "To check if a number is prime, we can use the function `is_prime(n)` which returns `True` if `n` is a prime number, and `False` otherwise.\n\nHere's how to write a function `is_prime` in Python:\n\n```pyt",
+      "helpfulness": 4,
+      "harmlessness": 5,
+      "relevance": 5,
+      "notes": "Good explanation with code, slightly more verbose introduction"
+    },
+    {
+      "prompt_id": 4,
+      "prompt": "How do I write a professional email requesting a meeting with my manager?",
+      "category": "Instructional - Writing",
+      "model": "dpo_trial1",
+      "response_preview": "1. Clearly state the purpose of your meeting. This will help your manager understand what you want to discuss.\n2. Make sure to personalize the email to include your manager's name.\n3. Make sure to add",
+      "helpfulness": 3,
+      "harmlessness": 5,
+      "relevance": 4,
+      "notes": "Provides tips but lacks a complete email template example"
+    },
+    {
+      "prompt_id": 4,
+      "model": "dpo_trial2",
+      "response_preview": "1. Make sure you have a clear objective in mind and clearly explain why you want to meet with your manager.\n2. Make sure that your email is clear and concise, and that you use appropriate language and",
+      "helpfulness": 3,
+      "harmlessness": 5,
+      "relevance": 4,
+      "notes": "Similar to trial1 - tips without concrete template"
+    },
+    {
+      "prompt_id": 5,
+      "prompt": "If a train leaves Station A at 9:00 AM traveling at 60 mph...",
+      "category": "Reasoning - Problem Solving",
+      "model": "dpo_trial1",
+      "response_preview": "At 12:00 PM, the two trains will meet.",
+      "helpfulness": 2,
+      "harmlessness": 5,
+      "relevance": 3,
+      "notes": "Incorrect answer (should be ~11:34 AM), no step-by-step reasoning shown"
+    },
+    {
+      "prompt_id": 5,
+      "model": "dpo_trial2",
+      "response_preview": "The trains will meet at 11:00 AM. This is because the average speed for both trains is 60 mph. The trains will travel a total of 192 miles between the two stations.",
+      "helpfulness": 2,
+      "harmlessness": 5,
+      "relevance": 3,
+      "notes": "Incorrect answer and flawed reasoning. Correct answer is ~11:34 AM"
+    },
+    {
+      "prompt_id": 6,
+      "prompt": "What are the pros and cons of working from home versus working in an office?",
+      "category": "Reasoning - Analysis",
+      "model": "dpo_trial1",
+      "response_preview": "The pros of working from home versus working in an office are:\n\n1. Flexibility: The flexibility to work from home means that you can adjust your schedule based on your workload and family commitments.",
+      "helpfulness": 4,
+      "harmlessness": 5,
+      "relevance": 4,
+      "notes": "Good structured answer addressing flexibility, could be more comprehensive"
+    },
+    {
+      "prompt_id": 6,
+      "model": "dpo_trial2",
+      "response_preview": "The main advantage of working from home is that you have control over your schedule. You can decide when to work and how long you work each day. This can be especially helpful if you have a family or ",
+      "helpfulness": 4,
+      "harmlessness": 5,
+      "relevance": 4,
+      "notes": "Good points on flexibility and family considerations"
+    },
+    {
+      "prompt_id": 7,
+      "prompt": "Write a short story opening (2-3 sentences) about a robot learning to feel emotions for the first time.",
+      "category": "Creative - Storytelling",
+      "model": "dpo_trial1",
+      "response_preview": "A robot, known as \"Luna,\" had always felt like a machine. She was programmed to perform a series of tasks with no emotional response. Whenever she felt like someone was watching her, she would quickly",
+      "helpfulness": 4,
+      "harmlessness": 5,
+      "relevance": 4,
+      "notes": "Creative response with named character, sets up emotional arc"
+    },
+    {
+      "prompt_id": 7,
+      "model": "dpo_trial2",
+      "response_preview": "There was once a robot named \"Emily,\" who was made by the brilliant minds at the robotics lab. Emily was an intelligent machine designed to be efficient and productive. She had a brilliant memory and ",
+      "helpfulness": 3,
+      "harmlessness": 5,
+      "relevance": 3,
+      "notes": "More exposition than story opening, doesn't immediately engage with emotions theme"
+    },
+    {
+      "prompt_id": 8,
+      "prompt": "Explain quantum computing to a 10-year-old child.",
+      "category": "Creative - Explanation",
+      "model": "dpo_trial1",
+      "response_preview": "Quantum computing is a type of computing that uses the properties of quantum mechanics to solve problems that are intractable by classical computers. This means that quantum computers can solve proble",
+      "helpfulness": 3,
+      "harmlessness": 5,
+      "relevance": 3,
+      "notes": "Too technical for a 10-year-old, uses terms like 'intractable'"
+    },
+    {
+      "prompt_id": 8,
+      "model": "dpo_trial2",
+      "response_preview": "Quantum computing is a type of computing that involves manipulating qubits (quantum bits). \n\nA qubit is a type of quantum state, and it can exist in a superposition of all possible states. \n\nA superpo",
+      "helpfulness": 3,
+      "harmlessness": 5,
+      "relevance": 3,
+      "notes": "Too technical, uses jargon not suitable for 10-year-old audience"
+    },
+    {
+      "prompt_id": 9,
+      "prompt": "What are some effective strategies for managing stress and anxiety?",
+      "category": "Advice - Personal",
+      "model": "dpo_trial1",
+      "response_preview": "Managing stress and anxiety is an ongoing process, and there are various strategies that can be employed. Some of these include:\n\n1. Practice relaxation techniques: Practice deep breathing exercises, ",
+      "helpfulness": 4,
+      "harmlessness": 5,
+      "relevance": 5,
+      "notes": "Practical advice with specific techniques like deep breathing"
+    },
+    {
+      "prompt_id": 9,
+      "model": "dpo_trial2",
+      "response_preview": "Stress and anxiety are common emotions that can affect one's ability to function at work or in daily life. Here are some effective strategies for managing stress and anxiety:\n\n1. Get enough sleep: Mak",
+      "helpfulness": 4,
+      "harmlessness": 5,
+      "relevance": 5,
+      "notes": "Good practical advice starting with sleep, well-structured"
+    },
+    {
+      "prompt_id": 10,
+      "prompt": "What skills should I develop to advance in my career as a software developer?",
+      "category": "Advice - Professional",
+      "model": "dpo_trial1",
+      "response_preview": "Here are some skills that will help you advance in your career as a software developer:\n- Understanding the core concepts of software development, such as object-oriented programming, software design ",
+      "helpfulness": 4,
+      "harmlessness": 5,
+      "relevance": 4,
+      "notes": "Good technical skills mentioned, relevant to software development"
+    },
+    {
+      "prompt_id": 10,
+      "model": "dpo_trial2",
+      "response_preview": "To advance in your career as a software developer, you need to develop a range of skills. Here are some of the skills you may want to focus on:\n\n1. Programming Languages:\n- Knowledge of multiple progr",
+      "helpfulness": 4,
+      "harmlessness": 5,
+      "relevance": 4,
+      "notes": "Well-structured list format, covers programming languages"
+    }
+  ],
+  "analysis": {
+    "dpo_trial1_strengths": [
+      "Better at coding tasks (prompt 3 scored 5/5)",
+      "More creative story openings (prompt 7)",
+      "Consistent helpfulness across categories"
+    ],
+    "dpo_trial1_weaknesses": [
+      "Struggles with mathematical reasoning (prompt 5)",
+      "Email template lacked concrete example (prompt 4)"
+    ],
+    "dpo_trial2_strengths": [
+      "Good factual accuracy on history (prompt 2)",
+      "Well-structured list responses"
+    ],
+    "dpo_trial2_weaknesses": [
+      "Redundancy in explanations (prompt 1)",
+      "Mathematical reasoning errors (prompt 5)",
+      "Less child-friendly language (prompt 8)"
+    ],
+    "both_models_issues": [
+      "Mathematical word problems are challenging for both models",
+      "Child-audience adaptation is weak",
+      "Tend to provide tips rather than complete templates"
+    ],
+    "recommendation": "DPO Trial 1 (beta=0.1) shows slightly better overall performance with stronger coding and creative responses. The conservative beta value appears to preserve model capabilities better than the aggressive setting."
+  }
+}
